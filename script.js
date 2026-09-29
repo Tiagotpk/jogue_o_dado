@@ -49,13 +49,14 @@ btnRoll.addEventListener('click', function () {
   }
 });
 
+//Segurando o resultado
 btnHold.addEventListener('click', function () {
   if (playing) {
     scores[activePlayer] += currentScore;
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
 
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= 1) {
       playing = false;
       diceEl.classList.add('hidden');
 
@@ -69,4 +70,9 @@ btnHold.addEventListener('click', function () {
       switchPlayer();
     }
   }
+});
+
+//Resetando o Jogo
+btnNew.addEventListener('click', function () {
+  location.reload();
 });

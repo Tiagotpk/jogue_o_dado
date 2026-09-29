@@ -158,7 +158,9 @@ main {
 }
 
 .player--winner {
-  background-color: #2f2f2f;
+  background-image: linear-gradient(to top left, #fff700 45%, #ffbf00 55%);
+  position: relative;
+  overflow: hidden;
 }
 
 .player--winner .name {
@@ -168,4 +170,33 @@ main {
 
 .hidden {
   display: none;
+}
+
+.player--winner::after {
+  content: '🎉 🚀 Você venceu!🥳 🎊 ✨';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 3rem;
+  white-space: nowrap;
+  pointer-events: none;
+
+  animation: winnerAnimation 1.5s ease-out forwards;
+}
+
+@keyframes winnerAnimation {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+
+  30% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -150%) scale(2);
+    opacity: 0;
+  }
 }
