@@ -12,7 +12,7 @@ O primeiro jogador a alcançar **100 pontos** vence a partida! 🏆
 
 > Jogue o dado, acumule pontos e escolha o momento certo para segurá-los!
 
-🔗 **[Acessar o projeto]([https://tiagotpk.github.io/jogue_o_dado/])**
+🔗 **[Acessar o projeto](https://tiagotpk.github.io/jogue_o_dado/)**
 
 
 ---
